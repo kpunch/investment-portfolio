@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Portfolio Tracker</h1>
+    <div id="portfolio-table-container">
+        <h2>Portfolio Overview</h2>
+        <table id="portfolio-table">
+            <thead>
+                <tr>
+                    <th>Stock/Asset</th>
+                    <th>Shares</th>
+                    <th>3/27/24 Value</th>
+                    <th>CV (Current Value)</th>
+                    <th>Delta</th>
+                </tr>
+            </thead>
+            <tbody id="portfolio-body"></tbody>
+        </table>
+    </div>
+    <div id="chart-container">
+        <h2>Performance Over Time</h2>
+        <select id="time-range" onchange="updateChart()">
+            <option value="1m">1 Month</option>
+            <option value="3m">3 Months</option>
+            <option value="6m">6 Months</option>
+            <option value="1y">1 Year</option>
+            <option value="5y">5 Years</option>
+        </select>
+        <canvas id="performance-chart"></canvas>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
